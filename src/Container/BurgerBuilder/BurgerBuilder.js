@@ -66,6 +66,7 @@ export default class BurgerBuilder extends Component {
           addIngredient={this.addIngredient}
                 removeIngredient={this.removeIngredient}
                 disabled={disabledInfo}
+                total={this.state.total}
         />
       </React.Fragment>
     )
