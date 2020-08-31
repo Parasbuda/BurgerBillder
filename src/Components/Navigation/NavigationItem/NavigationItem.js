@@ -1,11 +1,18 @@
 import React from "react"
 import "./NavigationItem.css"
-const NavigationItem = ({ link, title, active }) => {
-  ;<li className="navigationItem">
-    <a href={link} className={`${active}?"active":null`}>
-      {title}
+import { act } from "react-dom/test-utils"
+const NavigationItem = ( props ) => {
+  const { linkto, active, children } = props
+  
+ 
+  return(
+  <li className="navigationItem">
+    <a href={linkto} className={`${active}?"active":"null"`}>
+      {children}
     </a>
-  </li>
+      </li>
+  )
+  
 }
 
 export default NavigationItem
